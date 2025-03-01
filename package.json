@@ -1,0 +1,50 @@
+{
+  "name": "image-processing-service",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "dev:docker": "docker compose up --build",
+    "delete:docker": "docker compose down --rmi all --volumes",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Devashish08/image-processing-service.git"
+  },
+  "keywords": ["image", "processing", "api", "microservice", "sharp", "aws"],
+  "author": "Devashish",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Devashish08/image-processing-service/issues"
+  },
+  "homepage": "https://github.com/Devashish08/image-processing-service#readme",
+  "description": "A microservice for image processing, optimization, and storage",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.651.1",
+    "amqplib": "^0.10.4",
+    "argon2": "^0.41.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.6.3",
+    "multer": "^1.4.5-lts.1",
+    "redis": "^4.7.0",
+    "sharp": "^0.33.5"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.5",
+    "prettier": "^3.2.5",
+    "supertest": "^6.3.4"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
